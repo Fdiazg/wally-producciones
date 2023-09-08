@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="En nuestro sitio web especializado en mastering, ofrecemos un servicio profesional de masterización de audio para productores y músicos. Obtén la mejor calidad de audio para tus producciones musicales. Además, en nuestro sitio web encontrarás información valiosa sobre el proceso de masterización y consejos para mejorar la calidad de tus producciones musicales. ¡Contáctanos hoy para obtener más información y mejorar la calidad de tu música!">
+    <meta name="keywords" content="mastering, masterizar, producción musical, audio, música">
+    <meta name="author" content="viejomastering">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Viejo Mastering</title>
+    <!-- TODO CAMBIAR EL ICONO -->
+    <link rel="icon" type="image/png" href="./material_grafico/isotipo/Wally-Isotipo-V1---Rosado-Crema.png" sizes="16x16">
+    <!-- TODO CAMBIAR EL ICONO -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/faqs.css">
+    <link rel="stylesheet" href="./css/menu.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@300&family=Raleway:wght@300;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor-main">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./material_grafico/Imagotipo/Wally-Imagotipo-V2--Crema-Rosado.png" alt="Logo" class="user-block__logo">
+                </a>
+            </div>
+
+            <div class="main-nav menu-toggle" id="main-nav">
+                <nav class="mastering-main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item main-nav__link-activo ">
+                            <a class="main-nav__link" href="./index.html" data-destino="inicio">Inicio</a>
+                        </li>
+                        <li class="main-nav__item main-nav__link-activo link-activo">
+                            <a class="main-nav__link" href="#valores" data-destino="valores">Valores</a>
+                        </li>
+                        <li class="main-nav__item main-nav__link-activo">
+                            <a class="main-nav__link" href="./contacto.html" data-destino="contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="rrss">
+                <ul class="nav-rrss">
+                    <li class="nav-rrss__item">
+                        <a class="nav-rrss__item-link"
+                            href="https://open.spotify.com/playlist/0U44osC9GK05mbAX3j4zyu?si=12c48744a6e1476a"
+                            target="_blank"><i class="bi bi-spotify"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div id="menu">
+                <div class="drop-menu" id="drop-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="faqs-container" id="valores">
+            <div class="faqs-titulo">
+                <h2>Valores</h2>
+            </div>
+            <div class="main-faqs">
+                <div class="faqs-lista">
+                    <div class="faqs-lista__preguntas">
+                        <h3>¿Qué es Mastering?</h3><i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faqs-lista__descripcion">
+                        <div class="faqs-lista-contenido">
+                            <p>
+                                Masterizar es el proceso estético final de la creación de un disco o canción antes de su
+                                publicación en streaming, lanzamiento en CD, Vinilo, etc.
+                            </p>
+                            <p>
+                                Para lograr esto se emplean herramientas como ecualización, compresión, limitación entre
+                                otras. Todo esto depende de las necesidades que requiera cada proyecto.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faqs-lista__preguntas">
+                        <h3>¿Cómo enviar los archivos para masterizar?</h3><i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faqs-lista__descripcion">
+                        <div class="faqs-lista-contenido">
+                            <p>
+                                Algunas recomendaciones al momento de enviar los archivos son las siguientes:
+                            </p>
+                            <ul>
+                                <li>
+                                    <p> Es recomenado mandar los archivos en <strong>.wav 24bits.</strong></p>
+
+                                </li>
+                                <li>
+                                    <p> Exportar la mezcla en la misma frecuencia de muestro en que se trabajo la mezcla
+                                        <strong>(44.1, 48, 88.2, 96khz, etc).</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p> Es recomendado dejar cierto rango dinamico para trabajar. Que los peaks lleguen
+                                        a
+                                        <strong>-6dBFS.</strong> Si por motivos esteticos superan esta recomendacion,
+                                        esta
+                                        bien y hagalo saber.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p> Si necesita masterizar más de una canción, envielas enumeradas y también indique
+                                        si
+                                        alguna de esas es un single
+                                        <strong>(01-cancion, 02-cancion2(single)).</strong>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faqs-lista__preguntas">
+                        <h3>¿Donde enviar las mezclas?</h3><i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faqs-lista__descripcion">
+                        <div class="faqs-lista-contenido">
+                            <p>
+                                Para enviar las mezclas o realizar cualquier consulta rellene el siguiente formulario de
+                                <strong> <a href="./contacto.html">contacto</a>
+                                </strong>
+                            </p>
+                            <p>
+                                Ante cualquier duda contactece al correo
+                                <strong> <a href="mailto:viejomastering@gmail.com">correo@gmail.com</a>
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faqs-lista__preguntas">
+                        <h3>¿Puedo enviar referencias?</h3><i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faqs-lista__descripcion">
+                        <div class="faqs-lista-contenido">
+                            <p>
+                                Si busca algun sonido en especifico y desea envíar algún tema de referencia, no dude en
+                                hacerlo.
+                            </p>
+                            <p>
+                                Adjuntelo junto a sus canciones o mencione donde se puede escuchar dicha canción.
+                                Especifique lo más detallado posible lo que busque conseguir, cualquier comentario o
+                                sugerencia que ayude a lograr el sonido que busca es bien recibido.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faqs-lista__preguntas">
+                        <h3>¿Cuanto es el tiempo de entrega de los master?</h3><i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faqs-lista__descripcion">
+                        <div class="faqs-lista-contenido">
+                            <p>
+                                El tiempo de entrega de un Single es de aproximadamente <strong> 3 días</strong>
+                                hábiles.
+                            </p>
+                            <p>
+                                Un Lp o Ep puede variar dependiendo de cuanta sea la cantidad de canciones que se
+                                requieren masterizar.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faqs-lista__preguntas">
+                        <h3>¿Puedo pedir correcciones en el master?</h3><i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faqs-lista__descripcion">
+                        <div class="faqs-lista-contenido">
+                            <p>
+                                Cada master tiene un límite de 3 correcciones gratuitas dentro de los primeros 7 días
+                                hábiles.
+                            </p>
+                            <p>
+                                Cualquier corrección extra tendrá un costo adicional.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faqs-lista__preguntas">
+                        <h3>¿Se puede revisar la mezcla antes de mandar a masterizar?</h3><i
+                            class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faqs-lista__descripcion">
+                        <div class="faqs-lista-contenido">
+                            <p>
+                                Sí, no hay ningún problema. Puede enviar su mezcla previo al master sin costo adicional.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faqs-lista__preguntas">
+                        <h3>¿Cómo se envían los master ya terminados?</h3><i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="faqs-lista__descripcion">
+                        <div class="faqs-lista-contenido">
+                            <p>
+                                Los master se envían en un archivo de wetransfer en los siguientes formatos:
+                            </p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        1.<strong> Wav 16bit. 44.1Khz</strong>
+                                    </p>
+
+                                </li>
+                                <li>
+                                    <p> 2. Formato original de envío de mezclas
+                                        <strong>(44.1, 48, 88.2, 96khz, etc).</strong>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        3. <strong>Mp3 320Kbps</strong>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-footer">
+        <div class="descripcion-footer">
+            <div class="secciones-footer">
+                <ul class="secciones-footer__list">
+                    <li><a href="mailto:viejomastering@gmail.com">correo@correo.com</a></li>
+                    <!-- <li><a href="https://viejomastering.wordpress.com/">Blog</a></li> -->
+                    <li><a href="./contacto.html">Contacto </a></li>
+                </ul>
+            </div>
+            <div class="rrss">
+                <ul class="footer-rrss">
+                    <li class="nav-rrss__item">
+                        <a class="nav-rrss__item-link"
+                            href="https://open.spotify.com/playlist/0U44osC9GK05mbAX3j4zyu?si=12c48744a6e1476a"
+                            target="_blank"><i class="bi bi-spotify"></i></a>
+                    </li>
+                    <li class="nav-rrss__item">
+                        <a class="nav-rrss__item-link" href="https://www.instagram.com/viejo_mastering/"><i
+                                class="bi bi-instagram"></i></a>
+                    </li>
+                    <li class="nav-rrss__item">
+                        <a class="nav-rrss__item-link" href="https://wa.me/985644253?text=Hola,%20que%20tal?"
+                            target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bajada-footer">
+            <p class="firma-fdiazg-dev"> fdiazg.dev 👋</p>
+        </div>
+    </footer>
+
+    <!-- <script src="../js/app.js"></script> -->
+    <script src="./js/faqs.js"></script>
+    <script src="./js/menu.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

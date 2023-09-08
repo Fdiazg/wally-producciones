@@ -1,0 +1,346 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+:root {
+    --azul-50: #F1F8FE;
+    --azul-100: #E2F0FC;
+    --azul-200: #BFE0F8;
+    --azul-300: #87C9F2;
+    --azul-400: #47ACE9;
+    --azul-500: #1F92D8;
+    --azul-600: #1174B8;
+    --azul-700: #0F5D95;
+    --azul-800: #114F7B;
+    --azul-900: #134267;
+    --azul-950: #0B243A;
+
+    --text-primario: #fff;
+    --text-secundario: #8492A7;
+
+    --texto-primario-claro: #000;
+
+    --rosa-50: #FDF2F7;
+    --rosa-100: #FCE7F1;
+    --rosa-200: #FCCEE3;
+    --rosa-300: #FBA6CB;
+    --rosa-400: #F76FA8;
+    --rosa-500: #F04487;
+    --rosa-600: #E1306C;
+    --rosa-700: #C2144A;
+    --rosa-800: #A0143D;
+    --rosa-900: #851637;
+    --rosa-950: #52051C;
+
+    --background-primero: #1C1F25;
+    --background-secundario: #171a1e;
+    --background-terciario: #16181D;
+
+
+
+
+
+
+
+
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.contacto-container {
+    width: 80%;
+    margin: auto;
+}
+
+.main-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}
+
+.contacto-titulo {
+    padding: 0 4rem;
+}
+
+.contacto-titulo h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0px;
+    padding: 1.5rem;
+}
+
+.info-contacto h3 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    padding: 1rem 4rem;
+}
+
+
+
+.info-contacto__campos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 4rem;
+
+}
+
+
+.form-info {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 32%;
+    padding: .5rem 0;
+    justify-content: space-between;
+}
+
+.form-info__comentario {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 0;
+    flex-basis: 100%;
+    font-size: 14px;
+}
+
+.form-submit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    flex-basis: 100%;
+    margin: auto;
+    width: fit-content;
+}
+
+
+.form-info input,
+.form-info select {
+    background: var(--background-terciario);
+    padding: .5rem;
+    border: 1px solid rgb(255 255 255 / 9%);
+    border-radius: .5rem;
+    height: 2.5rem;
+
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.form-info:hover input,
+.form-info:hover select,
+.form-info__comentario:hover textarea{
+    border: 1px solid var(--azul-800);
+}
+
+.form-info input:focus,
+.form-info select:focus,
+.form-info__comentario textarea:focus{
+    border: 1px solid var(--azul-500);
+    outline: none;
+}
+
+
+.form-info label {
+    font-size: 14px;
+}
+
+
+
+.form-info__comentario textarea {
+    background: var(--background-terciario);
+    padding: .5rem;
+    border: 1px solid rgb(255 255 255 / 9%);
+    border-radius: .5rem;
+
+}
+
+.form-submit input {
+    background: var(--background-terciario);
+    padding: .5rem 2rem;
+    border: 1px solid rgb(255 255 255 / 9%);
+    border-radius: .5rem;
+    height: 2.5rem;
+    transition: .3s ease all;
+
+}
+
+.form-submit input:hover {
+    border: 1px solid var(--azul-800);
+    background-color: rgba(36, 57, 179, 0.178);
+    border: 1px solid var(--azul-600 );
+    transition: .3s ease all;
+    opacity: 1;
+}
+
+.form-submit input:focus{
+    border: 1px solid var(--azul-500);
+    outline: none;
+
+}
+
+
+.form-info input::placeholder {
+    color: var(--text-secundario);
+}
+
+
+.form-info__faq {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 32%;
+    padding: .5rem 0;
+}
+
+.form-info__faq p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.form-info__faq a {
+    color: var(--text-primario);
+    text-decoration: underline !important;
+
+}
+
+.form-info__faq a:hover {
+    color: var(--rosa-700);
+}
+
+.form-faqs {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    padding: 1rem 4rem;
+}
+
+.bajada-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.bajada-form p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.bajada-form a:first-child {
+    color: var(--text-primario);
+    text-decoration: underline !important;
+
+}
+
+.bajada-form a:hover:first-child {
+    color: var(--rosa-700);
+}
+
+.link-a{
+    color: var(--text-primario);
+    margin: 1rem;
+    padding: .5rem 2rem;
+    border: 1px solid var(--azul-800);
+    transition: .3s ease all;
+    font-weight: 500;
+    opacity: .9;
+
+}
+
+.link-a:hover{
+    background-color: rgba(36, 57, 179, 0.178);
+    border: 1px solid var(--azul-600 );
+    transition: .3s ease all;
+    opacity: 1;
+}
+
+
+
+.mensajeForm{
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+    padding: 1rem 4rem 4rem 4rem;
+}
+
+.mensajeForm p {
+    margin: 0;
+}
+
+.loader {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+
+@media (max-width:768px) {
+
+    .main-contacto{
+        padding-bottom: .5rem;
+        border-bottom: 1px solid var(--azul-800);
+        margin-bottom: 1rem;
+    }
+
+    .contacto-container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .form-info{
+        flex-basis: 48%;
+    }
+
+    .info-contacto__campos{
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .info-contacto h3 {
+        text-align: center;
+    }
+
+    .form-info__faq{
+        flex-basis: 48%;
+    }
+
+}
+
+@media (max-width:426px){
+    .form-faqs{
+        padding: 1rem .5rem;
+    }
+    .bajada-form p {
+        padding-bottom: .5rem;
+    }
+}

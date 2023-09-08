@@ -1,0 +1,115 @@
+:root {
+    --azul-50: #F1F8FE;
+    --azul-100: #E2F0FC;
+    --azul-200: #BFE0F8;
+    --azul-300: #87C9F2;
+    --azul-400: #47ACE9;
+    --azul-500: #1F92D8;
+    --azul-600: #1174B8;
+    --azul-700: #0F5D95;
+    --azul-800: #114F7B;
+    --azul-900: #134267;
+    --azul-950: #0B243A;
+
+    --text-primario: #fff;
+    --text-secundario: #8492A7;
+
+    --texto-primario-claro: #000;
+
+    --background-primero: #1C1F25;
+    --background-secundario: #171a1e;
+    --background-terciario: #16181D;
+
+
+
+    --rosa-50: #FDF2F7;
+    --rosa-100: #FCE7F1;
+    --rosa-200: #FCCEE3;
+    --rosa-300: #FBA6CB;
+    --rosa-400: #F76FA8;
+    --rosa-500: #F04487;
+    --rosa-600: #E1306C;
+    --rosa-700: #C2144A;
+    --rosa-800: #A0143D;
+    --rosa-900: #851637;
+    --rosa-950: #52051C;
+
+}
+/* @media (max-width:729px) */
+
+@media (max-width:426px) {
+    .drop-menu {
+        display: flex;
+        align-items: center;
+        /* margin-top:50vh; */
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .drop-menu span {
+        background-color: ghostwhite;
+        width: 1.5rem;
+        height: .1rem;
+        margin: 0.225rem 0;
+        display: block;
+        transition: all .4s ease;
+        transform-origin: 0 0;
+    }
+
+    .open-menu span:nth-child(1) {
+        transform: rotate(45deg) translate(1px, -1px);
+    }
+
+    .open-menu span:nth-child(2) {
+        Transform: scaleX(0);
+    }
+
+    .open-menu span:nth-child(3) {
+        transform: rotate(-45deg) translate(1px, 0);
+    }
+
+    .menu-toggle {
+        transition: all .4s ease;
+        position: fixed;
+        top: 4rem;
+        opacity: 0;
+        left: 15rem;
+        padding: 8rem 6rem;
+        z-index: -1;
+        background: var(--background-terciario);
+
+    }
+
+    .main-nav__open {
+        transition: all .4s ease;
+        position: absolute;
+        top: 4rem;
+        left: 10.25rem;
+        padding: 8rem 6rem;
+        background: var(--background-terciario);
+        z-index: 1;
+        opacity: 1;
+        box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.3);
+    }
+
+    .main-nav__list {
+        gap: 3rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width:376px) {
+    .main-nav__open {
+        left: 7.25rem;
+    }
+}
+
+
+@media (max-width:321px) {
+    .main-nav__open {
+        left: 5.5rem;
+        padding: 8rem 5rem;
+    }
+}

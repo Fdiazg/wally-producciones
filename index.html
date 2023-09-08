@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="En nuestro sitio web especializado en mastering, ofrecemos un servicio profesional de masterización de audio para productores y músicos. Obtén la mejor calidad de audio para tus producciones musicales. Además, en nuestro sitio web encontrarás información valiosa sobre el proceso de masterización y consejos para mejorar la calidad de tus producciones musicales. ¡Contáctanos hoy para obtener más información y mejorar la calidad de tu música!">
+    <meta name="keywords" content="mastering, masterizar, producción musical, audio, música">
+    <meta name="author" content="viejomastering">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wally Producciones</title>
+    <!-- TODO CAMBIAR EL ICONO -->
+    <link rel="icon" type="image/png" href="./material_grafico/isotipo/Wally-Isotipo-V1---Rosado-Crema.png" sizes="16x16">
+    <!-- TODO CAMBIAR EL ICONO -->
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@300&family=Raleway:wght@300;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor-main ">
+
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./material_grafico/logotipo/Wally-Logotipo-V1-Crema.png" alt="Logo" class="user-block__logo">
+                </a>
+            </div>
+
+            <div class="main-nav menu-toggle" id="main-nav">
+                <nav class="mastering-main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item main-nav__link-activo link-activo">
+                            <a class="main-nav__link" href="#" data-destino="inicio">Inicio</a>
+                        </li>
+                        <!-- <li class="main-nav__item main-nav__link-activo">
+                            <a class="main-nav__link" href="faqs.html" data-destino="faqs">FAQ's</a>
+                        </li> -->
+                        <li class="main-nav__item main-nav__link-activo">
+                            <a class="main-nav__link" href="./valores.html" data-destino="contacto">Valores</a>
+                        </li>
+                        <li class="main-nav__item main-nav__link-activo">
+                            <a class="main-nav__link" href="./sobre-mi.html" data-destino="contacto">Sobre mi</a>
+                        </li>
+                        <li class="main-nav__item main-nav__link-activo">
+                            <a class="main-nav__link" href="./contacto.html" data-destino="contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="rrss">
+                <ul class="nav-rrss">
+                    <li class="nav-rrss__item">
+                        <a class="nav-rrss__item-link"
+                            href="https://open.spotify.com/playlist/0U44osC9GK05mbAX3j4zyu?si=12c48744a6e1476a"
+                            target="_blank"><i class="bi bi-spotify"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="menu">
+                <div class="drop-menu" id="drop-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <section class="container-trabajos">
+            <div class="trabajos-titulo">
+                <h1>Producciones</h1>
+            </div>
+            <div class="trabajos-subtitulo">
+                <h2>Artistas que han confiado en nuestro trabajo</h2>
+            </div>
+            <div class="container-mastering__img">
+
+                <div class="container-botones">
+                    <button id="izquierda" class="btn-flechas ocultar-botones">
+                        <i class="bi bi-arrow-left-circle"></i>
+                    </button>
+                    <button id="derecha" class="btn-flechas">
+                        <i class="bi bi-arrow-right-circle"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="loader">
+                <div class="lds-dual-ring"></div>
+            </div>
+
+        </section>
+        <div class="hidden" id="popup">
+            <div class="popup-container">
+                <div class="popup-container__main">
+
+                    <div class="popup-portada">
+                    </div>
+                    <div class="popup-descripcion">
+                    </div>
+                    <i class="bi bi-x"></i>
+
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="info-mastering">
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-footer">
+        <div class="descripcion-footer">
+            <div class="secciones-footer">
+                <ul class="secciones-footer__list">
+                    <li><a href="mailto:viejomastering@gmail.com">correo@gmail.com</a></li>
+                    <!-- <li><a href="https://viejomastering.wordpress.com/">Blog</a></li> -->
+                    <li><a href="./contacto.html">Contacto </a></li>
+                </ul>
+            </div>
+            <div class="rrss">
+                <ul class="footer-rrss">
+                    <li class="nav-rrss__item">
+                        <a class="nav-rrss__item-link"
+                            href="https://open.spotify.com/playlist/0U44osC9GK05mbAX3j4zyu?si=12c48744a6e1476a"
+                            target="_blank"><i class="bi bi-spotify"></i></a>
+                    </li>
+                    <li class="nav-rrss__item">
+                        <a class="nav-rrss__item-link" href="https://www.instagram.com/viejo_mastering/"><i
+                                class="bi bi-instagram"></i></a>
+                    </li>
+                    <li class="nav-rrss__item">
+                        <a class="nav-rrss__item-link" href="https://wa.me/985644253?text=Hola,%20que%20tal?"
+                            target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bajada-footer">
+            <p class="firma-fdiazg-dev"> fdiazg.dev 👋</p>
+        </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
