@@ -86,7 +86,8 @@
         top: 4rem;
         left: 10.25rem;
         padding: 8rem 6rem;
-        background: var(--background-terciario);
+        /* background: var(--background-terciario); */
+        background: var(--color-fondo-morado-dark);
         z-index: 1;
         opacity: 1;
         box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.3);

@@ -77,7 +77,10 @@ a {
     justify-content: space-between;
     cursor: pointer;
     margin-top: 1rem;
-    background-color: #23272F;
+    /* background-color: #23272F; */
+
+    background-color: var(--color-fondo-morado-dark);
+
     padding: 0 1rem;
     border: 1px solid rgb(255 255 255 / 9%);
 
@@ -133,7 +136,13 @@ a {
 .faqs-lista-contenido {
     padding: 1rem 2rem;
     border: 1px solid rgb(255 255 255 / 9%);
-    background: #16181D;
+    /* background: #16181D; */
+
+    background: var(--color-fondo-morado-dark);
+
+    opacity: .85;
+
+
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }

@@ -134,7 +134,10 @@ a {
 
 .form-info input,
 .form-info select {
-    background: var(--background-terciario);
+    /* background: var(--background-terciario); */
+
+    background: var(--color-fondo-rosa-dark);
+
     padding: .5rem;
     border: 1px solid rgb(255 255 255 / 9%);
     border-radius: .5rem;
@@ -168,7 +171,9 @@ a {
 
 
 .form-info__comentario textarea {
-    background: var(--background-terciario);
+    /* background: var(--background-terciario); */
+    background: var(--color-fondo-rosa-dark);
+
     padding: .5rem;
     border: 1px solid rgb(255 255 255 / 9%);
     border-radius: .5rem;
@@ -176,7 +181,9 @@ a {
 }
 
 .form-submit input {
-    background: var(--background-terciario);
+    /* background: var(--background-terciario); */
+    background: var(--color-fondo-rosa-dark);
+    
     padding: .5rem 2rem;
     border: 1px solid rgb(255 255 255 / 9%);
     border-radius: .5rem;

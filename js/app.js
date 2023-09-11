@@ -7,23 +7,30 @@ function cargarPortadasDom() {
             return res.json();
         })
         .then(data => {
-            // console.table(data.mastering)
-            const dataMaster = data.producciones;
+
+            const dataProd = data.producciones;
+
             const containerPortadas = document.querySelector(".container-mastering__img");
             // const popupImg = document.querySelector(".popup-portada");
             const divPortadas = document.createElement('div');
             divPortadas.classList.add('portadas');
 
+            dataProd.sort((a, b) => a.orden - b.orden);
+
+            console.log(dataProd);
+
+
+
 
             // Inicializar la página actual y el límite de imágenes por página
-            let currentPage = 0;
-            let limitPerPage = 24;
+            // let currentPage = 0;
+            // let limitPerPage = 24;
 
             //Cambiar para versión mobile
-            const mediaQuery = window.matchMedia("(max-width: 426px)");
-            if (mediaQuery.matches) {
-                limitPerPage = 12;
-            }
+            // const mediaQuery = window.matchMedia("(max-width: 426px)");
+            // if (mediaQuery.matches) {
+            //     limitPerPage = 12;
+            // }
 
             // if (window.innerWidth < 768) {
             //     limitPerPage = 16;
@@ -31,7 +38,7 @@ function cargarPortadasDom() {
 
 
             //Aplicar portadas de forma random antes de mostrarlas
-            dataMaster.sort(() => Math.random() - 0.5);
+            // dataMaster.sort(() => Math.random() - 0.5);
 
 
             document.querySelector('.loader').style.display = 'block';
@@ -45,100 +52,115 @@ function cargarPortadasDom() {
                 // popupImg.innerHTML = '';
 
                 // Calcular los índices de las imágenes a mostrar
-                const startIndex = currentPage * limitPerPage;
-                const endIndex = startIndex + limitPerPage;
+                // const startIndex = currentPage * limitPerPage;
+                // const endIndex = startIndex + limitPerPage;4
+
+
 
 
                 // Mostrar las imágenes en el rango calculado
-                for (let i = startIndex; i < endIndex && i < dataMaster.length; i++) {
+                for (let i = 1; i < dataProd.length; i++) {
+
+
                     const img = document.createElement('img');
-                    img.src = dataMaster[i].linkPortada;
+                    img.src = dataProd[i].linkPortada;
                     img.classList.add("img-portadas")
-                    img.alt = `${dataMaster[i].nombreProducto} (${dataMaster[i].discoTipo})`;
+                    img.alt = `${dataProd[i].nombreProducto}`;
+                    
+
+                    img.style.opacity = 0;
+
+
                     divPortadas.appendChild(img);
+                     
 
                     //? popup
                     // Agrega el evento click para mostrar el popup
                     img.addEventListener("click", () => {
-                        currentImg = dataMaster[i].linkPortada;
-                        currentArtista = dataMaster[i].artista;
-                        currentLanzamiento = dataMaster[i].nombreProducto;
-                        discoTipo = dataMaster[i].discoTipo;
-                        fechaLanzamiento = dataMaster[i].fechaLanzamiento;
-                        linkSpotify = dataMaster[i].linkSpotify;
+                        artista = dataProd[i].artista;
+                        comentario = dataProd[i].comentario;
+                        trabajoRealizado = dataProd[i].trabajoRealizado;
+                        nombreLanzamiento = dataProd[i].nombreProducto;
+                        fechaLanzamiento = dataProd[i].fechaLanzamiento;
+                        linkSpotify = dataProd[i].linkSpotify;
+                        linkInstagram = dataProd[i].linkInstagram;
+                        currentImg = dataProd[i].linkPortada;
 
 
-                        popupPortadas(currentImg, currentArtista, currentLanzamiento, discoTipo, fechaLanzamiento, linkSpotify);
+                        popupPortadas(artista, comentario,trabajoRealizado, nombreLanzamiento, fechaLanzamiento, linkSpotify, linkInstagram,currentImg);
                     });
                     //  popupImg.appendChild(img);
 
                 }
 
                 // Ocultar el loader después de cargar las imágenes
+
+
+
                 document.querySelector('.loader').style.display = 'none';
 
 
                 // Agregar el contenedor de imágenes al contenedor principal
                 containerPortadas.appendChild(divPortadas);
+
+                setTimeout(() => {
+                    for (const img of divPortadas.querySelectorAll('.img-portadas')) {
+                      img.style.opacity = 1; // Cambia la opacidad a 1 para mostrar gradualmente con transición
+                    }
+                  }, 100);
             };
 
             // Mostrar las imágenes iniciales
 
             showImages();
 
-            const derechaBtn = document.getElementById('derecha');
-            const izquierdaBtn = document.getElementById('izquierda');
+            // const derechaBtn = document.getElementById('derecha');
+            // const izquierdaBtn = document.getElementById('izquierda');
 
             // Función para ir a la página siguiente
-            const nextPage = () => {
+            // const nextPage = () => {
 
-                if ((currentPage + 1) * limitPerPage < dataMaster.length) {
-                    currentPage++;
-                    showImages();
-                   // console.log(currentPage)
-                    if ((currentPage + 1) * limitPerPage >= dataMaster.length) {
-                        derechaBtn.classList.add("ocultar-botones")
-                       // console.log(currentPage)
-                    }
-                }
-            };
+            //     if ((currentPage + 1) * limitPerPage < dataMaster.length) {
+            //         currentPage++;
+            //         showImages();
+            //         if ((currentPage + 1) * limitPerPage >= dataMaster.length) {
+            //             derechaBtn.classList.add("ocultar-botones")
+            //         }
+            //     }
+            // };
 
             // Función para ir a la página anterior
-            const prevPage = () => {
-                if (currentPage > 0) {
-                    currentPage--;
-                    showImages();
-                   // console.log(currentPage)
+            // const prevPage = () => {
+            //     if (currentPage > 0) {
+            //         currentPage--;
+            //         showImages();
 
-                    if (currentPage == 0) {
-                        izquierdaBtn.classList.add("ocultar-botones")
-                      //  console.log(currentPage)
-                    }
-                }
-            };
+            //         if (currentPage == 0) {
+            //             izquierdaBtn.classList.add("ocultar-botones")
+            //         }
+            //     }
+            // };
             // Asignar la función de ir a la página siguiente al botón "derecha"
 
             // derechaBtn.addEventListener('click', nextPage);
-            derechaBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                nextPage();
-                // popupPortadas();
-                if (currentPage >= 1) {
-                    izquierdaBtn.classList.remove("ocultar-botones")
-                }
-            })
+            // derechaBtn.addEventListener('click', (e) => {
+            //     e.preventDefault();
+            //     nextPage();
+            //     if (currentPage >= 1) {
+            //         izquierdaBtn.classList.remove("ocultar-botones")
+            //     }
+            // })
 
             // Asignar la función de ir a la página anterior al botón "izquierda"
 
-            izquierdaBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                prevPage();
-                // popupPortadas();
+            // izquierdaBtn.addEventListener('click', (e) => {
+            //     e.preventDefault();
+            //     prevPage();
 
-                if ((currentPage + 1) * limitPerPage < dataMaster.length) {
-                    derechaBtn.classList.remove("ocultar-botones")
-                }
-            });
+            //     if ((currentPage + 1) * limitPerPage < dataMaster.length) {
+            //         derechaBtn.classList.remove("ocultar-botones")
+            //     }
+            // });
         })
         .catch(err => {
             console.log(err)
@@ -148,8 +170,9 @@ function cargarPortadasDom() {
 
 
 //TODO Popup
+// popupPortadas(currentArtista, comentario,trabajoRealizado, currentLanzamiento, fechaLanzamiento, linkSpotify, linkInstagram,currentImg);
 
-function popupPortadas(img, artista, nombreLanzamiento, discoTipo, fechaLanzamiento, linkSpotify) {
+function popupPortadas(artista, comentario,trabajoRealizado, nombreLanzamiento, fechaLanzamiento, linkSpotify,linkInstagram, currentImg) {
 
     // Obtenemos los elementos del DOM del popup
     const popupImg = document.querySelector(".popup-portada");
@@ -170,7 +193,7 @@ function popupPortadas(img, artista, nombreLanzamiento, discoTipo, fechaLanzamie
 
 
     const imgElement = document.createElement('img');
-    imgElement.src = img;
+    imgElement.src = currentImg;
     imgElement.alt = nombreLanzamientoElement.textContent;
     popupImg.appendChild(imgElement);
 
@@ -179,13 +202,46 @@ function popupPortadas(img, artista, nombreLanzamiento, discoTipo, fechaLanzamie
     fechaLanzamientoElement.textContent = fechaLanzamiento;
     popupDescripcion.appendChild(fechaLanzamientoElement);
 
+
+    //comentario,trabajoRealizado
+
+    const trabajoRealizadoElement = document.createElement('p');
+    trabajoRealizadoElement.textContent =`Trabajo: ${trabajoRealizado}` ;
+    popupDescripcion.appendChild(trabajoRealizadoElement);
+
+    const comentarioElement = document.createElement('p');
+    comentarioElement.textContent =`Extra: ${comentario}`  ;
+    popupDescripcion.appendChild(comentarioElement);
+
+
+
+
+
     const linkSpotifyElement = document.createElement('a');
     linkSpotifyElement.href = linkSpotify;
     linkSpotifyElement.target = "_blank"
     // linkSpotifyElement.textContent = 'Escucha aquí! ';
-    linkSpotifyElement.innerHTML = ` <i class="bi bi-spotify"></i> Escucha en Spotify!`;
+    // linkSpotifyElement.innerHTML = ` <i class="bi bi-spotify"></i> Escucha en Spotify!`;
+    linkSpotifyElement.innerHTML = ` <i class="bi bi-spotify"></i>`;
 
-    popupDescripcion.appendChild(linkSpotifyElement);
+    const linkInstagramElement = document.createElement('a');
+    linkInstagramElement.href = linkInstagram;
+    linkInstagramElement.target = '_blank'
+    linkInstagramElement.innerHTML = `<i class="bi bi-instagram"></i>`
+
+
+    const rrssElementos = document.createElement('div');
+
+    rrssElementos.classList.add('contenedorRRSS');
+    rrssElementos.appendChild(linkSpotifyElement)
+    rrssElementos.appendChild(linkInstagramElement)
+
+    popupDescripcion.appendChild(rrssElementos);
+
+
+
+    // popupDescripcion.appendChild(linkSpotifyElement);
+    // popupDescripcion.appendChild(linkInstagramElement)
 
     // Mostramos el popup
     const popup = document.querySelector("#popup");

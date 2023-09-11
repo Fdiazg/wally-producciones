@@ -448,6 +448,12 @@ main {
     transition: all .2s ease;
     cursor: pointer;
     height: min-content;
+
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
 }
 
 .bi-x:hover {
@@ -479,10 +485,14 @@ main {
     width: fit-content;
     position: fixed;
     top: 30%;
-    background: var(--background-primero);
+    /* background: var(--background-primero); */
+    background: var(--color-fondo-rosa-dark);
     box-shadow: 1px 6px 12px 0px rgb(0 0 0 / 50%);
     border-radius: .5rem;
     z-index: 5;
+
+    align-items: center;
+
 }
 
 .popup-portada img {
@@ -509,7 +519,7 @@ main {
     width: 200px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 
@@ -535,7 +545,10 @@ main {
     font-size: 18px;
 }
 
-.popup-descripcion i {
+.popup-descripcion .bi-instagram {
+    color: #E1306C
+}
+.popup-descripcion .bi-spotify {
     color: #1DB954;
 }
 
@@ -547,6 +560,17 @@ main {
     display: flex;
     justify-content: center;
 
+}
+
+.contenedorRRSS{
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px; */
+}
+
+.contenedorRRSS a{
+    padding-right: 16px;
 }
 
 
@@ -624,16 +648,14 @@ main {
         width: 200px;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
+        /* white-space: nowrap; */
     }
 
 
-    .bi-x {
+    /* .bi-x {
         position: relative;
-        /* top: -165px; */
         top: -90px;
-        /* left: 365px; */
-    }
+    } */
 
     /* *Footer */
     .descripcion-footer {
@@ -654,16 +676,21 @@ main {
         display: flex;
         align-items: center;
         flex-direction: column;
-        /* height: 320px; */
+         /* height: 320px;  */
         padding: 0.75rem;
-    }
 
+
+        justify-content: center;
+
+        top: 9%;
+
+    }
+/* 
     .bi-x {
         position: relative;
         top: -374px;
-        /* top: -90px; */
         left: 119px;
-    }
+    } */
 
     .popup-portada img {
         margin: 1rem;
@@ -693,17 +720,17 @@ main {
         flex-direction: column;
         /* height: 320px; */
         padding: .75rem;
-        top: 20%;
+        /* top: 20%; */
     }
     .container-trabajos h2{
         font-size: 16px;
     }
 
-    .bi-x {
+    /* .bi-x {
         position: relative;
         top: -375px;
         left: 118px;
-    }
+    } */
 
 
 }
@@ -749,12 +776,10 @@ main {
         padding: .5rem;
     }
 
-    .bi-x {
-        /* position: unset;
-        margin: 0 -1rem;
-        padding-right: 1rem; */
+    /* .bi-x {
+
         top: -366px;
-    }
+    } */
 }
 
 @media (max-width: 321px) {
@@ -771,3 +796,8 @@ main {
         gap: 0.75rem;
     }
 }
+
+.portadas img{
+    opacity: 1; 
+    transition: opacity 1s ease-in-out; }
+
