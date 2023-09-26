@@ -147,7 +147,9 @@ a {
     border-bottom-right-radius: 1rem;
 }
 
-
+.faqs-lista-contenido li{
+    list-style: disc;
+}
 
 
 @media (max-width:768px) {
@@ -171,6 +173,8 @@ a {
     .faqs-lista-contenido ul{
         padding-left: .5rem;
     }
+
+
 
 }
 

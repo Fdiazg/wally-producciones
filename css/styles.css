@@ -365,7 +365,8 @@ main {
 }
 
 .secciones-footer a {
-    color: var(--text-secundario);
+    /* color: var(--text-secundario); */
+    color: var(--color-texto-crema-1);
 }
 
 .secciones-footer a:hover {
@@ -464,14 +465,15 @@ main {
 
 
 .popup-container {
-    height: 200vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: rgb(0 0 0/ 30%);
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     top: 0;
     left: 0;
 }
@@ -546,7 +548,8 @@ main {
 }
 
 .popup-descripcion .bi-instagram {
-    color: #E1306C
+    /* color: #E1306C */
+    color: white;
 }
 .popup-descripcion .bi-spotify {
     color: #1DB954;
@@ -572,6 +575,55 @@ main {
 .contenedorRRSS a{
     padding-right: 16px;
 }
+
+.about-container{
+    width: 80%;
+    margin: auto;
+    padding: 1.5rem 0;
+}
+
+.about-seccion{
+    padding: 0 4rem;
+}
+
+.contenido-about{
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -800,4 +852,6 @@ main {
 .portadas img{
     opacity: 1; 
     transition: opacity 1s ease-in-out; }
+
+
 

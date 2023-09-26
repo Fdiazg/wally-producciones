@@ -1,11 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description"
+        content="En nuestro sitio web especializado en mastering, ofrecemos un servicio profesional de masterización de audio para productores y músicos. Obtén la mejor calidad de audio para tus producciones musicales. Además, en nuestro sitio web encontrarás información valiosa sobre el proceso de masterización y consejos para mejorar la calidad de tus producciones musicales. ¡Contáctanos hoy para obtener más información y mejorar la calidad de tu música!">
+    <meta name="keywords" content="mastering, masterizar, producción musical, audio, música">
+    <meta name="author" content="viejomastering">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wally Producciones</title>
+    <!-- TODO CAMBIAR EL ICONO -->
+    <link rel="icon" type="image/png" href="./material_grafico/isotipo/Wally-Isotipo-V1---Rosado-Crema.png"
+        sizes="16x16">
+    <!-- TODO CAMBIAR EL ICONO -->
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/faqs.css">
+
+
+    <link href="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+    " rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@300&family=Raleway:wght@300;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="contenedor-main ">
+
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./material_grafico/logotipo/Wally-Logotipo-V1-Crema.png" alt="Logo"
+                        class="user-block__logo">
+                </a>
+            </div>
+
+            <div class="main-nav menu-toggle" id="main-nav">
+                <nav class="mastering-main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item main-nav__link-activo link-activo">
+                            <a class="main-nav__link" href="./index.html" data-destino="inicio">Inicio</a>
+                        </li>
+                        <!-- <li class="main-nav__item main-nav__link-activo">
+                            <a class="main-nav__link" href="faqs.html" data-destino="faqs">FAQ's</a>
+                        </li> -->
+                        <li class="main-nav__item main-nav__link-activo">
+                            <a class="main-nav__link" href="./servicios.html" data-destino="contacto">Servicios</a>
+                        </li>
+                        <li class="main-nav__item main-nav__link-activo">
+                            <a class="main-nav__link" href="#" data-destino="contacto">Sobre mí</a>
+                        </li>
+                        <li class="main-nav__item main-nav__link-activo">
+                            <a class="main-nav__link" href="./contacto.html" data-destino="contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="rrss">
+                <ul class="nav-rrss">
+                    <li class="nav-rrss__item">
+                        <a class="nav-rrss__item-link"
+                            href="https://open.spotify.com/playlist/0U44osC9GK05mbAX3j4zyu?si=12c48744a6e1476a"
+                            target="_blank"><i class="bi bi-spotify"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="menu">
+                <div class="drop-menu" id="drop-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <section class="about-container">
+            <div class="about-seccion">
+                <div class="about-descripcion-seccion">
+                    <h4>Presentación:</h4>
+                    <div class="contenido-about">
+                        <img src="./img/img.jpg" alt="img">
+                        <div class="text-about">
+                            <p>Hola! Mi nombre es Wally y soy une productore no binarie. La mayoría de mi trabajo se
+                                realiza
+                                en “La Casa de la Olguita”, espacio construido en la casa de mi abuela, en donde hemos
+                                trabajado la gran mayoría de los proyectos que pueden verse en esta página.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-descripcion-seccion">
+                    <h4>La Casa de la Olguita:</h4>
+                    <div class="contenido-about">
+                        <div class="text-about">
+                            <p>Ubicado en la comuna de Cerro Navia, el enfoque principal de este espacio es recordar en
+                                todo
+                                momento que nuestro trabajo se desarrolla en una casa. Lo más común es que almorcemos
+                                todes
+                                juntes junto a mi abuela, que en algún momento me vean haciendo una pausita para
+                                tenderle la
+                                ropa y ese tipo de cosas.
+
+                                Más allá del carácter hogareño y distendido del espacio, este cuenta con tratamiento
+                                acústico y un equipamiento de primer nivel:
+                            </p>
+                            <p>Ficha técnica:</p>
+                            <ul>
+                                <li>
+                                    Macbook Pro M1 2020
+                                </li>
+                                <li>
+                                    Interfaz Motu Ultralite Mk5 </li>
+                                <li>
+                                    Pre-Amplificador Warm Audio WA MPX
+
+                                </li>
+                                <li>
+                                    Akg 414 XLS
+                                </li>
+                                <li>
+                                    Warm audio WA-87 FET
+
+                                </li>
+                                <li>
+                                    Shure Sm57
+
+                                </li>
+                                <li>
+                                    Samson VR88 (Cinta)
+
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="./img/img.jpg" alt="img">
+
+                    </div>
+                </div>
+                <div class="about-descripcion-seccion">
+                    <h4>Estudios Asociados:</h4>
+                    <div class="contenido-about estudios-about">
+                        <div class="text-about">
+                            <p>
+                                Además de mi espacio personal de trabajo, tengo convenios Estudio ZR y Room Studios, en
+                                donde podemos grabar baterías y pianos, respectivamente, sin costo adicional (Solo para
+                                producciones completas)
+
+                            </p>
+                        </div>
+
+                    </div>
+                    <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src="./img/img.jpg" alt="img" width="250px">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./img/img.jpg" alt="img"  width="250px">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./img/img.jpg" alt="img"  width="250px">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./img/img.jpg" alt="img"  width="250px">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./img/img.jpg" alt="img"  width="250px">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./img/img.jpg" alt="img"  width="250px">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./img/img.jpg" alt="img"  width="250px">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./img/img.jpg" alt="img"  width="250px">
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./img/img.jpg" alt="img"  width="250px">
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+
+            </div>
+
+
+
+        </section>
+
+
+
+    </main>
+
+    <footer class="container-footer">
+        <div class="descripcion-footer">
+            <div class="secciones-footer">
+                <ul class="secciones-footer__list">
+                    <li><a href="mailto:wallyproduccionmusical@gmail.com">wallyproduccionmusical@gmail.com</a></li>
+                    <!-- <li><a href="https://viejomastering.wordpress.com/">Blog</a></li> -->
+                    <li><a href="./contacto.html">Contacto </a></li>
+                </ul>
+            </div>
+            <div class="rrss">
+                <ul class="footer-rrss">
+                    <li class="nav-rrss__item">
+                        <a class="nav-rrss__item-link"
+                            href="https://open.spotify.com/playlist/0U44osC9GK05mbAX3j4zyu?si=12c48744a6e1476a"
+                            target="_blank"><i class="bi bi-spotify"></i></a>
+                    </li>
+                    <li class="nav-rrss__item">
+                        <a class="nav-rrss__item-link" href="https://www.instagram.com/viejo_mastering/"><i
+                                class="bi bi-instagram"></i></a>
+                    </li>
+                    <li class="nav-rrss__item">
+                        <a class="nav-rrss__item-link" href="https://wa.me/971704471?text=Hola,%20que%20tal?"
+                            target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="bajada-footer">
+            <p class="firma-fdiazg-dev"> fdiazg.dev 👋</p>
+        </div> -->
+    </footer>
+
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+    "></script>
+    <script src="./js/splide-prod.js"></script>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+        </script>
 </body>
+
 </html>
