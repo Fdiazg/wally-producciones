@@ -5,10 +5,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
           height  : '10rem',
           lazyLoad: 'nearby',
           gap: 8,
+          arrows: false,
+          
           breakpoints: {
               640: {
                   perPage: 1,
                   height  : '24rem',
+                  type: "loop",
+                  arrows: true,
               },
           },
     } ).mount();
