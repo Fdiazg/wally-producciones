@@ -8,6 +8,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
           breakpoints: {
               640: {
                   perPage: 1,
+                  height  : '24rem',
               },
           },
     } ).mount();

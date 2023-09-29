@@ -598,7 +598,10 @@ main {
     flex-direction: row;
 }
 
-
+.img-about{
+    max-width: 300px;
+    max-height: 300px;
+}
 
 
 
