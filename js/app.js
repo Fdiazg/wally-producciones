@@ -1,126 +1,105 @@
-const API = 'https://wally-backend-api-render.onrender.com/producciones'
+const API = 'https://wally-backend-api-render.onrender.com/producciones';
 
-
-
+const perPage = 20; 
+let loading = false;
+let page = 1;
+let dataProd = []; 
 
 function cargarPortadasDom() {
+    const containerPortadas = document.querySelector(".container-mastering__img");
+    const divPortadas = document.createElement('div');
+    divPortadas.classList.add('portadas');
 
-    fetch(API)
-        .then(res => {
-            return res.json();
-        })
-        .then(data => {
+    const loadData = async () => {
+        if (loading) return;
 
-            const dataProd = data.producciones;
+        loading = true;
 
-            const containerPortadas = document.querySelector(".container-mastering__img");
-            const divPortadas = document.createElement('div');
-            divPortadas.classList.add('portadas');
+        try {
+            const response = await fetch(API);
 
-
-
-            function convertirFecha(fecha) {
-                const partes = fecha.split('/');
-                const fechaFormateada = `${partes[2]}-${partes[1]}-${partes[0]}`;
-                return new Date(fechaFormateada);
-            }
-
-            // dataProd.sort((a, b) => {
-            //     const fechaA = convertirFecha(a.fechaLanzamiento);
-            //     const fechaB = convertirFecha(b.fechaLanzamiento);
-            //     return fechaB - fechaA;
-            // });
-
-
-             dataProd.sort((a, b) => a.orden - b.orden);
-
-
-
-            document.querySelector('.loader').style.display = 'block';
-
-
-
-            // Función para mostrar las imágenes en la página actual
-            const showImages = () => {
-                divPortadas.innerHTML = '';
-
-                // for (let i = 1; i < dataProd.length; i++) {
-                for (let i = 1; i < dataProd.length; i++) {
+            const data = await response.json();
+            dataProd = data.producciones;
 
             
+            document.querySelector('.loader').style.display = 'none';
 
 
-                    const img = document.createElement('img');
-                    img.src = dataProd[i].linkPortada;
-                    img.classList.add("img-portadas")
-                    img.alt = `${dataProd[i].nombreProducto}`;
+            dataProd.sort((a, b) => a.orden - b.orden);
 
 
-                    img.style.opacity = 0;
+            // Mostrar los primeros elementos
+            showPage(dataProd, page);
+
+            loading = false;
+        } catch (error) {
+            console.error(error);
+            loading = false;
+        }
+    };
+
+    // Función para mostrar una página de elementos
+    const showPage = (data, pageNumber) => {
+        const startIndex = (pageNumber - 1) * perPage;
+        const endIndex = startIndex + perPage;
+        const pageData = data.slice(startIndex, endIndex);
 
 
-                    divPortadas.appendChild(img);
+
+        pageData.forEach((item) => {
+            const img = document.createElement('img');
+            img.src = item.linkPortada;
+            img.classList.add("img-portadas");
+            img.alt = item.nombreProducto;
+            img.style.opacity = 0;
 
 
-                    //? popup
 
-                    img.addEventListener("click", () => {
-                        artista = dataProd[i].artista;
-                        comentario = dataProd[i].comentario;
-                        trabajoRealizado = dataProd[i].trabajoRealizado;
-                        nombreLanzamiento = dataProd[i].nombreProducto;
-                        fechaLanzamiento = dataProd[i].fechaLanzamiento;
-                        linkSpotify = dataProd[i].linkSpotify;
-                        linkInstagram = dataProd[i].linkInstagram;
-                        currentImg = dataProd[i].linkPortada;
+            img.addEventListener("click", () => {
+                const {
+                    artista,
+                    comentario,
+                    trabajoRealizado,
+                    nombreProducto,
+                    fechaLanzamiento,
+                    linkSpotify,
+                    linkInstagram,
+                    linkPortada
+                } = item;
 
+                popupPortadas(artista, comentario, trabajoRealizado, nombreProducto, fechaLanzamiento, linkSpotify, linkInstagram, linkPortada);
+            });
 
-                        popupPortadas(artista, comentario, trabajoRealizado, nombreLanzamiento, fechaLanzamiento, linkSpotify, linkInstagram, currentImg);
-                    });
-
-                }
-
-
-                document.querySelector('.loader').style.display = 'none';
-
-
-                // Agregar el contenedor de imágenes al contenedor principal
-                containerPortadas.appendChild(divPortadas);
-
-                setTimeout(() => {
-                    for (const img of divPortadas.querySelectorAll('.img-portadas')) {
-                        img.style.opacity = 1;
-                    }
-                }, 100);
-            };
-
-            // window.addEventListener('scroll', function () {
-            //     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            //     const windowHeight = window.innerHeight;
-            //     const documentHeight = document.documentElement.scrollHeight;
-
-            //     const pixelsDesdeElFinal = 200;
-
-            //     if (scrollTop + windowHeight >= documentHeight - pixelsDesdeElFinal) {
-            //     }
-            // });
-
-
-            showImages();
-
-        })
-        .catch(err => {
-            console.log(err)
+            divPortadas.appendChild(img);
         });
-    // popupPortadas()
+
+        containerPortadas.appendChild(divPortadas);
+
+        setTimeout(() => {
+            for (const img of divPortadas.querySelectorAll('.img-portadas')) {
+                img.style.opacity = 1;
+            }
+        }, 100);
+    };
+
+    // Detectar el desplazamiento al final de la página para mostrar más elementos
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const pixelsDesdeElFinal = 200;
+
+
+
+        if (scrollTop + windowHeight >= documentHeight - pixelsDesdeElFinal) {
+            page++; // Incrementar la página
+            showPage(dataProd, page); // Mostrar más elementos
+        }
+    });
+
+    // Cargar los primeros elementos
+    loadData();
 }
-
-
-
-
-
-
-
 
 
 
@@ -235,9 +214,8 @@ function closePortadas() {
 closePortadas();
 
 
+
+
 cargarPortadasDom()
-
-
-
 
 
