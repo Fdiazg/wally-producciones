@@ -13,12 +13,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>aquiestawally producciones</title>
     <!-- TODO CAMBIAR EL ICONO -->
-    <link rel="icon" type="image/png" href="./material_grafico/isotipo/Wally-Isotipo-V1---Rosado-Crema.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./material_grafico/isotipo/Wally-Isotipo-V1---Rosado-Crema.png"
+        sizes="16x16">
     <!-- TODO CAMBIAR EL ICONO -->
-
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/contacto.css">
+    <!-- <link rel="stylesheet" href="./css/faqs.css"> -->
     <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/reviews.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,10 +37,10 @@
 <body>
     <header class="header">
         <div class="contenedor-main">
-
             <div class="logo">
-                <a href="index.html">
-                    <img src="./material_grafico/logotipo/Wally-Logotipo-V1-Crema.png" alt="Logo" class="user-block__logo">
+                <a href="./index.html">
+                    <img src="./material_grafico/logotipo/Wally-Logotipo-V1-Crema.png" alt="Logo"
+                        class="user-block__logo">
                 </a>
             </div>
 
@@ -50,18 +51,17 @@
                             <a class="main-nav__link" href="./index.html" data-destino="inicio">Inicio</a>
                         </li>
                         <li class="main-nav__item main-nav__link-activo ">
-                            <a class="main-nav__link" href="./servicios.html" data-destino="valores">Servicios</a>
+                            <a class="main-nav__link" href="./servicios.html" data-destino="servicios">Servicios</a>
                         </li>
                         <li class="main-nav__item main-nav__link-activo">
                             <a class="main-nav__link" href="./sobre-mi.html" data-destino="contacto">Sobre mí</a>
                         </li>
-                        <li class="main-nav__item main-nav__link-activo">
-                            <a class="main-nav__link" href="./resenias.html" data-destino="contacto">Reseñas</a>
-                        </li>
                         <li class="main-nav__item main-nav__link-activo link-activo">
+                            <a class="main-nav__link" href="#" data-destino="contacto">Reseñas</a>
+                        </li>
+                        <li class="main-nav__item main-nav__link-activo">
                             <a class="main-nav__link" href="./contacto.html" data-destino="contacto">Contacto</a>
                         </li>
-
                     </ul>
                 </nav>
 
@@ -69,14 +69,11 @@
             <div class="rrss">
                 <ul class="nav-rrss">
                     <li class="nav-rrss__item">
-                        <a class="nav-rrss__item-link"
-                            href="https://spotify.link/dqPvOKqxoDb"
-                            target="_blank"><i class="bi bi-spotify"></i></a>
+                        <a class="nav-rrss__item-link" href="https://spotify.link/dqPvOKqxoDb" target="_blank"><i
+                                class="bi bi-spotify"></i></a>
                     </li>
                 </ul>
-
             </div>
-
             <div id="menu">
                 <div class="drop-menu" id="drop-menu">
                     <span></span>
@@ -84,63 +81,73 @@
                     <span></span>
                 </div>
             </div>
-
-
         </div>
     </header>
     <main>
-
-        <section class="contacto-container">
-            <div class="contacto-titulo">
-                <h2>Contacto</h2>
-
+        <section class="review-container" id="review">
+            <div class="review-titulo">
+                <h2>Reseñas</h2>
             </div>
-            <div class="loader d-none">
-                <div class="lds-dual-ring"></div>
-            </div>
-            <div class="main-contacto" id="main-contacto">
-                <form action="" name="contact" id="form" netlify method="POST">
-                    <div class="info-contacto">
-                        <h3>Información de contacto</h3>
-                        <div class="info-contacto__campos">
-                            <div class="form-info">
-                                <label for="name">Nombre</label>
-                                <input type="text" name="name" id="name" required>
-                            </div>
-                            <div class="form-info">
-                                <label for="email">Correo</label>
-                                <input type="email" name="email" id="email" required>
-                            </div>
-                            <div class="form-info">
-                                <label for="country">País</label>
-                                <select name="country" id="country">
-                                </select>
-                            </div>
+            <div class="main-review">
+                <ul class="review-lista">
+                    <li class="quote-review">
+                        <div class="quote-title">
+                            <h4>Pulento</h4>
+                            <div class="quote-star">★★★★★</div>
+                            <div class="quote-author">wally</div>
+                            <time datetime="2023-05-22T18:43:15-07:00" class="quote-date">octubre, 2023</time>
                         </div>
-                    </div>
-                    <div class="info-contacto">
-                        <h3>Información del proyecto</h3>
-                        <div class="info-contacto__campos">
-                            <div class="form-info__comentario">
-                                <label for="comment">Comentarios</label>
-                                <textarea name="comment" id="comment" cols="" rows="6"></textarea>
-                            </div>
+                        <div class="quote-text">
+                            <p>
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                            </p>
                         </div>
-                        <div class="form-submit">
-                            <input class="" type="submit" value="Enviar" id="enviarForm" />
+                    </li>
+                    <li class="quote-review">
+                        <div class="quote-title">
+                            <h4>Pulento</h4>
+                            <div class="quote-star">★★★★</div>
+                            <div class="quote-author">wally</div>
+                            <time datetime="2023-05-22T18:43:15-07:00" class="quote-date">octubre, 2023</time>
                         </div>
-                    </div>
-                </form>
-                <span class="division"></span>
-           
+                        <div class="quote-text">
+                            <p>
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                            </p>
+                        </div>
+                    </li>
+                    <li class="quote-review">
+                        <div class="quote-title">
+                            <h4>Pulento</h4>
+                            <div class="quote-star">★★★★★</div>
+                            <div class="quote-author">wally</div>
+                            <time datetime="2023-05-22T18:43:15-07:00" class="quote-date">octubre, 2023</time>
+                        </div>
+                        <div class="quote-text">
+                            <p>
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                               Esta es una reseña de prueba de una página con cosas de prueba
+
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                               Esta es una reseña de prueba de una página con cosas de prueba
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
             </div>
 
-            <div class="mensajeForm" id="mensajeForm">
-                <p>Formulario enviado correctamente.</p>
-                <p>Gracias por contactarse, le responderemos lo antes posible.</p>
-            </div>
         </section>
-
     </main>
 
     <footer class="container-footer">
@@ -148,15 +155,14 @@
             <div class="secciones-footer">
                 <ul class="secciones-footer__list">
                     <li><a href="mailto:wallyproduccionmusical@gmail.com">wallyproduccionmusical@gmail.com</a></li>
-                    <li><a href="#">Contacto </a></li>
+                    <li><a href="./contacto.html">Contacto </a></li>
                 </ul>
             </div>
             <div class="rrss">
                 <ul class="footer-rrss">
                     <li class="nav-rrss__item">
-                        <a class="nav-rrss__item-link"
-                            href="https://spotify.link/dqPvOKqxoDb"
-                            target="_blank"><i class="bi bi-spotify"></i></a>
+                        <a class="nav-rrss__item-link" href="https://spotify.link/dqPvOKqxoDb" target="_blank"><i
+                                class="bi bi-spotify"></i></a>
                     </li>
                     <li class="nav-rrss__item">
                         <a class="nav-rrss__item-link" href="https://www.instagram.com/aquiestawally/"><i
@@ -172,13 +178,13 @@
 
     </footer>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="./js/contacto.js"></script>
+    <script src="./js/faqs.js"></script>
     <script src="./js/menu.js"></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>

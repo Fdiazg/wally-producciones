@@ -21,7 +21,7 @@ function cargarPortadasDom() {
             const data = await response.json();
             dataProd = data.producciones;
 
-            
+
             document.querySelector('.loader').style.display = 'none';
 
 
@@ -82,7 +82,6 @@ function cargarPortadasDom() {
         }, 100);
     };
 
-    // Detectar el desplazamiento al final de la página para mostrar más elementos
     window.addEventListener('scroll', () => {
         const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         const windowHeight = window.innerHeight;
@@ -92,12 +91,11 @@ function cargarPortadasDom() {
 
 
         if (scrollTop + windowHeight >= documentHeight - pixelsDesdeElFinal) {
-            page++; // Incrementar la página
-            showPage(dataProd, page); // Mostrar más elementos
+            page++; 
+            showPage(dataProd, page);
         }
     });
 
-    // Cargar los primeros elementos
     loadData();
 }
 

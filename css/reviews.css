@@ -1,0 +1,113 @@
+
+:root {
+    --azul-50: #F1F8FE;
+    --azul-100: #E2F0FC;
+    --azul-200: #BFE0F8;
+    --azul-300: #87C9F2;
+    --azul-400: #47ACE9;
+    --azul-500: #1F92D8;
+    --azul-600: #1174B8;
+    --azul-700: #0F5D95;
+    --azul-800: #114F7B;
+    --azul-900: #134267;
+    --azul-950: #0B243A;
+
+    --text-primario: #fff;
+    --text-secundario: #8492A7;
+
+    --texto-primario-claro: #000;
+
+    --rosa-50: #FDF2F7;
+    --rosa-100: #FCE7F1;
+    --rosa-200: #FCCEE3;
+    --rosa-300: #FBA6CB;
+    --rosa-400: #F76FA8;
+    --rosa-500: #F04487;
+    --rosa-600: #E1306C;
+    --rosa-700: #C2144A;
+    --rosa-800: #A0143D;
+    --rosa-900: #851637;
+    --rosa-950: #52051C;
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.review-container {
+    width: 80%;
+    margin: auto;
+}
+
+.main-review {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}
+
+.review-titulo {
+    padding: 0 4rem;
+}
+
+.review-titulo h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0px;
+    padding: 1.5rem;
+}
+
+.review-lista {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4rem;
+}
+
+.quote-title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    margin-bottom: 8px;
+    align-items: baseline;
+
+
+}
+
+.quote-title h4,
+.quote-title .quote-star{
+    color: var(--color-fondo-morado-dark);
+}
+
+.quote-title .quote-author,
+.quote-title .quote-date{
+    color: var(--color-texto-crema-2);
+}
+
+
+@media (max-width:768px) {
+
+    .review-container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .review-lista {
+        padding: 0;
+    }
+
+
+
+
+}
+
+@media (max-width:426px){
+
+
+}
