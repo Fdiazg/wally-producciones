@@ -6,6 +6,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
           lazyLoad: 'nearby',
           gap: 8,
           arrows: false,
+          pagination: false,
           
           breakpoints: {
               640: {
@@ -13,6 +14,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
                   height  : '24rem',
                   type: "loop",
                   arrows: true,
+                  pagination: true,
               },
           },
     } ).mount();
