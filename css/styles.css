@@ -151,7 +151,7 @@ main {
     justify-content: space-between;
     padding: 1rem 4rem;
     /* * Versión 2.0 */
-    border-bottom: 1px solid var(--azul-800);
+    border-bottom: 1px solid var(--color-texto-crema-1);
 
     top: 0;
     right: 0;
@@ -381,6 +381,8 @@ main {
     margin: auto;
     /* padding: 4rem 4rem 1rem 4rem; */
     padding: 2rem 4rem 1rem 4rem;
+
+    border-top: 1px solid;
 
 }
 

@@ -1,4 +1,6 @@
-const API = 'https://wally-backend-api-render.onrender.com/producciones';
+// const API = 'https://wally-backend-api-render.onrender.com/producciones';
+const API = 'https://wally-backend-dev-jhqt.3.us-1.fl0.io/producciones'
+
 
 const perPage = 20; 
 let loading = false;
