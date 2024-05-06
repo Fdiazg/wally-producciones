@@ -25,7 +25,6 @@ function cargarPortadasDom() {
 
 
             document.querySelector('.loader').style.display = 'none';
-            // dataProd.sort((a, b) => a.orden - b.orden);
 
             const orderedData = dataProd.sort((a, b) => a.orden - b.orden);
 
