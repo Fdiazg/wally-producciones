@@ -280,17 +280,15 @@ main {
 
 
 
-.container-mastering__img {
+/* .container-mastering__img { */
     /* background: var(--color-fondo-rosa); */
     /* display: flex;
     flex-direction: column-reverse;
     height: 100%;
     min-height: 600px; */
     /* ; 
-    overflow-y: scroll;  */
-    
-
-}
+    overflow-y: scroll;
+}  */
 
 .portadas {
     display: flex;
@@ -582,7 +580,7 @@ main {
     color: #1DB954;
 }
 
-
+/* 
 .firma-fdiazg-dev {
     font-size: 14px;
     line-height: 6px;
@@ -590,14 +588,14 @@ main {
     display: flex;
     justify-content: center;
 
-}
+} */
 
-.contenedorRRSS{
+/* .contenedorRRSS{
     /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 16px; */
-}
+    gap: 16px; 
+} */
 
 .contenedorRRSS a{
     padding-right: 16px;

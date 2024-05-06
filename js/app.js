@@ -2,10 +2,10 @@
 const API = 'https://wally-backend-production.up.railway.app/producciones/'
 
 
-const perPage = 20; 
+const perPage = 20;
 let loading = false;
 let page = 1;
-let dataProd = []; 
+let dataProd = [];
 
 function cargarPortadasDom() {
     const containerPortadas = document.querySelector(".container-mastering__img");
@@ -25,13 +25,23 @@ function cargarPortadasDom() {
 
 
             document.querySelector('.loader').style.display = 'none';
+            // dataProd.sort((a, b) => a.orden - b.orden);
 
+            const orderedData = dataProd.sort((a, b) => a.orden - b.orden);
 
-            dataProd.sort((a, b) => a.orden - b.orden);
+            const finalResponse = dataProd.sort((a, b) => {
+                const ordenDiff = a.orden - b.orden;
+                if (ordenDiff !== 0) return ordenDiff;
 
+                const dateA = new Date(a.fechaLanzamiento.split('/').reverse().join('-'));
+                const dateB = new Date(b.fechaLanzamiento.split('/').reverse().join('-'));
+                return dateB - dateA;
+            });
 
+            console.log('orderedData', orderedData);
+            console.log('finalResponse', finalResponse);
             // Mostrar los primeros elementos
-            showPage(dataProd, page);
+            showPage(finalResponse, page);
 
             loading = false;
         } catch (error) {
@@ -93,7 +103,7 @@ function cargarPortadasDom() {
 
 
         if (scrollTop + windowHeight >= documentHeight - pixelsDesdeElFinal) {
-            page++; 
+            page++;
             showPage(dataProd, page);
         }
     });
